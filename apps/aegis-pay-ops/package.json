@@ -1,0 +1,22 @@
+{
+  "name": "@orcawhisperer/aegis-pay-ops",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Fictional B2B FinOps & Incident Response Copilot demonstrating real-world usage of Lathe (jev-1.13.0 + AG-UI + MCP)",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test dist/server.test.js"
+  },
+  "dependencies": {
+    "@orcawhisperer/lathe-ag-ui": "workspace:*",
+    "@orcawhisperer/lathe-core": "workspace:*",
+    "@orcawhisperer/lathe-guard": "workspace:*",
+    "@orcawhisperer/lathe-mcp": "workspace:*",
+    "@orcawhisperer/lathe-react": "workspace:*",
+    "@orcawhisperer/lathe-shadcn": "workspace:*",
+    "@orcawhisperer/lathe-typesafe": "workspace:*"
+  }
+}
