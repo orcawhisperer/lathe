@@ -2,7 +2,7 @@ import {
   type ComponentCalibration,
   resolve,
   unescapeToken,
-} from "@lathe/core";
+} from "@orcawhisperer/lathe-core";
 
 export interface RenderSurfaceOptions {
   readonly messages: ReadonlyArray<Record<string, unknown>>;

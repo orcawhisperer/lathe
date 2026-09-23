@@ -6,7 +6,7 @@ import {
   ReplayClient,
   humanizePointer,
   schemaTitleForPointer,
-} from "@lathe/core";
+} from "@orcawhisperer/lathe-core";
 import { SHADCN_CATALOG, SHADCN_PHRASE_BANK } from "../src/index.ts";
 
 describe("@lathe/shadcn catalog & M1/M2 features", () => {

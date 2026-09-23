@@ -1,11 +1,11 @@
 import http from "node:http";
-import { lintCatalog, swapSurfaceLocale } from "@lathe/core";
-import { TypeSafeAdapter } from "@lathe/typesafe";
-import { SHADCN_CATALOG, SHADCN_PHRASE_BANK } from "@lathe/shadcn";
-import { verifySurface } from "@lathe/guard";
-import { LatheAgUiMiddleware } from "@lathe/ag-ui";
-import { applyPointerPatch, renderSurfaceToHtml } from "@lathe/react";
-import { LatheMcpBridge, MCP_TOOL_PRESETS, type McpPresetId } from "@lathe/mcp";
+import { lintCatalog, swapSurfaceLocale } from "@orcawhisperer/lathe-core";
+import { TypeSafeAdapter } from "@orcawhisperer/lathe-typesafe";
+import { SHADCN_CATALOG, SHADCN_PHRASE_BANK } from "@orcawhisperer/lathe-shadcn";
+import { verifySurface } from "@orcawhisperer/lathe-guard";
+import { LatheAgUiMiddleware } from "@orcawhisperer/lathe-ag-ui";
+import { applyPointerPatch, renderSurfaceToHtml } from "@orcawhisperer/lathe-react";
+import { LatheMcpBridge, MCP_TOOL_PRESETS, type McpPresetId } from "@orcawhisperer/lathe-mcp";
 
 const PORT = Number(process.env["PORT"] ?? 4321);
 

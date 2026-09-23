@@ -8,7 +8,7 @@ import {
   noul,
   resolve,
   walk,
-} from "@lathe/core";
+} from "@orcawhisperer/lathe-core";
 
 export type GuardTier = "tier1_schema" | "tier1_5_trace" | "tier2_entailment" | "tier4_sink";
 export type GuardSeverity = "error" | "warning";

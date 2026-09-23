@@ -9,8 +9,8 @@ import {
   isScalar,
   scalarType,
   walk,
-} from "@lathe/core";
-import { type GuardReport, verifySurface } from "@lathe/guard";
+} from "@orcawhisperer/lathe-core";
+import { type GuardReport, verifySurface } from "@orcawhisperer/lathe-guard";
 
 export type AgUiEvent =
   | {

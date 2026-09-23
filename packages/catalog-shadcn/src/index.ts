@@ -1,4 +1,4 @@
-import { Catalog, PhraseBank } from "@lathe/core";
+import { Catalog, PhraseBank } from "@orcawhisperer/lathe-core";
 
 /**
  * Default i18n PhraseBank for common commerce, billing, support, and SaaS domains.

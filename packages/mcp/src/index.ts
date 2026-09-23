@@ -6,11 +6,11 @@ import {
   type PhraseBank,
   type SystemOneClient,
   swapSurfaceLocale,
-} from "@lathe/core";
-import { SHADCN_CATALOG, SHADCN_PHRASE_BANK } from "@lathe/shadcn";
-import { type GuardReport } from "@lathe/guard";
-import { type AgUiEvent, LatheAgUiMiddleware } from "@lathe/ag-ui";
-import { renderSurfaceToHtml } from "@lathe/react";
+} from "@orcawhisperer/lathe-core";
+import { SHADCN_CATALOG, SHADCN_PHRASE_BANK } from "@orcawhisperer/lathe-shadcn";
+import { type GuardReport } from "@orcawhisperer/lathe-guard";
+import { type AgUiEvent, LatheAgUiMiddleware } from "@orcawhisperer/lathe-ag-ui";
+import { renderSurfaceToHtml } from "@orcawhisperer/lathe-react";
 
 export interface McpToolDefinition {
   readonly name: string;

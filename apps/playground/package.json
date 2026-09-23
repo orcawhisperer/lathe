@@ -1,5 +1,5 @@
 {
-  "name": "@lathe/playground",
+  "name": "@orcawhisperer/lathe-playground",
   "version": "0.0.0",
   "private": true,
   "description": "Interactive Lathe Studio & AG-UI SSE Server with live TypeSafe System One (jev-1.13.0) compilation, shape caching, and 4-tier @lathe/guard X-Ray.",
@@ -11,13 +11,13 @@
     "test": "node --test"
   },
   "dependencies": {
-    "@lathe/core": "workspace:*",
-    "@lathe/typesafe": "workspace:*",
-    "@lathe/shadcn": "workspace:*",
-    "@lathe/guard": "workspace:*",
-    "@lathe/ag-ui": "workspace:*",
-    "@lathe/react": "workspace:*",
-    "@lathe/mcp": "workspace:*"
+    "@orcawhisperer/lathe-core": "workspace:*",
+    "@orcawhisperer/lathe-typesafe": "workspace:*",
+    "@orcawhisperer/lathe-shadcn": "workspace:*",
+    "@orcawhisperer/lathe-guard": "workspace:*",
+    "@orcawhisperer/lathe-ag-ui": "workspace:*",
+    "@orcawhisperer/lathe-react": "workspace:*",
+    "@orcawhisperer/lathe-mcp": "workspace:*"
   },
   "repository": {
     "type": "git",

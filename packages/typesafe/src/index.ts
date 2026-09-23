@@ -20,7 +20,7 @@ import {
   type Question,
   type SystemOneClient,
   type SystemOneResponse,
-} from "@lathe/core";
+} from "@orcawhisperer/lathe-core";
 
 export interface TypeSafeAdapterOptions extends TypeSafeClientConfig {
   /**

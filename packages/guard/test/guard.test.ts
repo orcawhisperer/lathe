@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { Catalog, PhraseBank, ReplayClient } from "@lathe/core";
+import { Catalog, PhraseBank, ReplayClient } from "@orcawhisperer/lathe-core";
 import { verifySurface } from "../src/index.ts";
 
 const TEST_PHRASES = new PhraseBank([

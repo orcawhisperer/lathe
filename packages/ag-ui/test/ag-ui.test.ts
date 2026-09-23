@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { Catalog, PhraseBank, ReplayClient } from "@lathe/core";
+import { Catalog, PhraseBank, ReplayClient } from "@orcawhisperer/lathe-core";
 import { LatheAgUiMiddleware, computeShapeHash, formatSseFrame } from "../src/index.ts";
 
 const MINI_CATALOG = new Catalog("https://lathe.dev/catalogs/ag-ui-test/v1", [

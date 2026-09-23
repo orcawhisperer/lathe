@@ -1,5 +1,5 @@
 {
-  "name": "@lathe/react",
+  "name": "@orcawhisperer/lathe-react",
   "version": "0.1.0",
   "description": "A2UI v0.9 surface renderer with shadcn/ui styling, confidence-driven runner-up swap pills, and two-way RFC 6901 JSON Pointer state patching.",
   "type": "module",
@@ -18,9 +18,9 @@
     "test": "node --test \"test/**/*.test.ts\""
   },
   "dependencies": {
-    "@lathe/core": "workspace:*",
-    "@lathe/guard": "workspace:*",
-    "@lathe/ag-ui": "workspace:*"
+    "@orcawhisperer/lathe-core": "workspace:*",
+    "@orcawhisperer/lathe-guard": "workspace:*",
+    "@orcawhisperer/lathe-ag-ui": "workspace:*"
   },
   "license": "Apache-2.0",
   "files": [

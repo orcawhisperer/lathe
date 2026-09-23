@@ -5,7 +5,7 @@ import {
   type Question,
   type SystemOneClient,
   type SystemOneResponse,
-} from "@lathe/core";
+} from "@orcawhisperer/lathe-core";
 import {
   LatheMcpBridge,
   MCP_TOOL_PRESETS,

@@ -1,5 +1,5 @@
 {
-  "name": "@lathe/ag-ui",
+  "name": "@orcawhisperer/lathe-ag-ui",
   "version": "0.1.0",
   "description": "AG-UI protocol middleware and SSE emitter for Lathe compiled A2UI v0.9 surfaces with shape-hash caching and @lathe/guard enforcement.",
   "type": "module",
@@ -18,8 +18,8 @@
     "test": "node --test \"test/**/*.test.ts\""
   },
   "dependencies": {
-    "@lathe/core": "workspace:*",
-    "@lathe/guard": "workspace:*"
+    "@orcawhisperer/lathe-core": "workspace:*",
+    "@orcawhisperer/lathe-guard": "workspace:*"
   },
   "license": "Apache-2.0",
   "files": [

@@ -17,64 +17,64 @@ importers:
 
   apps/playground:
     dependencies:
-      '@lathe/ag-ui':
+      '@orcawhisperer/lathe-ag-ui':
         specifier: workspace:*
         version: link:../../packages/ag-ui
-      '@lathe/core':
+      '@orcawhisperer/lathe-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@lathe/guard':
+      '@orcawhisperer/lathe-guard':
         specifier: workspace:*
         version: link:../../packages/guard
-      '@lathe/mcp':
+      '@orcawhisperer/lathe-mcp':
         specifier: workspace:*
         version: link:../../packages/mcp
-      '@lathe/react':
+      '@orcawhisperer/lathe-react':
         specifier: workspace:*
         version: link:../../packages/react
-      '@lathe/shadcn':
+      '@orcawhisperer/lathe-shadcn':
         specifier: workspace:*
         version: link:../../packages/catalog-shadcn
-      '@lathe/typesafe':
+      '@orcawhisperer/lathe-typesafe':
         specifier: workspace:*
         version: link:../../packages/typesafe
 
   packages/ag-ui:
     dependencies:
-      '@lathe/core':
+      '@orcawhisperer/lathe-core':
         specifier: workspace:*
         version: link:../core
-      '@lathe/guard':
+      '@orcawhisperer/lathe-guard':
         specifier: workspace:*
         version: link:../guard
 
   packages/catalog-shadcn:
     dependencies:
-      '@lathe/core':
+      '@orcawhisperer/lathe-core':
         specifier: workspace:*
         version: link:../core
 
   packages/cli:
     dependencies:
-      '@lathe/ag-ui':
+      '@orcawhisperer/lathe-ag-ui':
         specifier: workspace:*
         version: link:../ag-ui
-      '@lathe/core':
+      '@orcawhisperer/lathe-core':
         specifier: workspace:*
         version: link:../core
-      '@lathe/guard':
+      '@orcawhisperer/lathe-guard':
         specifier: workspace:*
         version: link:../guard
-      '@lathe/mcp':
+      '@orcawhisperer/lathe-mcp':
         specifier: workspace:*
         version: link:../mcp
-      '@lathe/react':
+      '@orcawhisperer/lathe-react':
         specifier: workspace:*
         version: link:../react
-      '@lathe/shadcn':
+      '@orcawhisperer/lathe-shadcn':
         specifier: workspace:*
         version: link:../catalog-shadcn
-      '@lathe/typesafe':
+      '@orcawhisperer/lathe-typesafe':
         specifier: workspace:*
         version: link:../typesafe
 
@@ -82,43 +82,43 @@ importers:
 
   packages/guard:
     dependencies:
-      '@lathe/core':
+      '@orcawhisperer/lathe-core':
         specifier: workspace:*
         version: link:../core
 
   packages/mcp:
     dependencies:
-      '@lathe/ag-ui':
+      '@orcawhisperer/lathe-ag-ui':
         specifier: workspace:*
         version: link:../ag-ui
-      '@lathe/core':
+      '@orcawhisperer/lathe-core':
         specifier: workspace:*
         version: link:../core
-      '@lathe/guard':
+      '@orcawhisperer/lathe-guard':
         specifier: workspace:*
         version: link:../guard
-      '@lathe/react':
+      '@orcawhisperer/lathe-react':
         specifier: workspace:*
         version: link:../react
-      '@lathe/shadcn':
+      '@orcawhisperer/lathe-shadcn':
         specifier: workspace:*
         version: link:../catalog-shadcn
 
   packages/react:
     dependencies:
-      '@lathe/ag-ui':
+      '@orcawhisperer/lathe-ag-ui':
         specifier: workspace:*
         version: link:../ag-ui
-      '@lathe/core':
+      '@orcawhisperer/lathe-core':
         specifier: workspace:*
         version: link:../core
-      '@lathe/guard':
+      '@orcawhisperer/lathe-guard':
         specifier: workspace:*
         version: link:../guard
 
   packages/typesafe:
     dependencies:
-      '@lathe/core':
+      '@orcawhisperer/lathe-core':
         specifier: workspace:*
         version: link:../core
       '@typesafe-ai/sdk':

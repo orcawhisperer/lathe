@@ -9,12 +9,12 @@ import {
   compileSurface,
   lintCatalog,
   swapSurfaceLocale,
-} from "@lathe/core";
-import { SHADCN_CATALOG, SHADCN_PHRASE_BANK } from "@lathe/shadcn";
-import { verifySurface } from "@lathe/guard";
-import { renderSurfaceToHtml } from "@lathe/react";
-import { TypeSafeAdapter } from "@lathe/typesafe";
-import { LatheMcpBridge, MCP_TOOL_PRESETS, type McpPresetId } from "@lathe/mcp";
+} from "@orcawhisperer/lathe-core";
+import { SHADCN_CATALOG, SHADCN_PHRASE_BANK } from "@orcawhisperer/lathe-shadcn";
+import { verifySurface } from "@orcawhisperer/lathe-guard";
+import { renderSurfaceToHtml } from "@orcawhisperer/lathe-react";
+import { TypeSafeAdapter } from "@orcawhisperer/lathe-typesafe";
+import { LatheMcpBridge, MCP_TOOL_PRESETS, type McpPresetId } from "@orcawhisperer/lathe-mcp";
 
 export interface CliResult {
   readonly exitCode: number;

@@ -9,7 +9,7 @@ import { runCli } from "../src/index.ts";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const FIXTURES_DIR = resolve(__dirname, "../../../spec/conformance/fixtures");
 
-describe("@lathe/cli", () => {
+describe("@orcawhisperer/lathe-cli", () => {
   it("lathe lint passes SHADCN_CATALOG with 0 errors and 0 warnings", async () => {
     const res = await runCli(["lint", "--catalog", "shadcn"]);
     assert.equal(res.exitCode, 0);
