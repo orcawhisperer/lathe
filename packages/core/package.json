@@ -1,0 +1,35 @@
+{
+  "name": "@lathe/core",
+  "version": "0.1.0",
+  "description": "Compile A2UI surfaces from a component catalog and an application state. No text is generated.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test \"test/**/*.test.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orcawhisperer/lathe.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/orcawhisperer/lathe#readme",
+  "bugs": {
+    "url": "https://github.com/orcawhisperer/lathe/issues"
+  }
+}

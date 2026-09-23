@@ -1,0 +1,47 @@
+{
+  "name": "@lathe/cli",
+  "version": "0.1.0",
+  "description": "Command-line compiler, catalog linter, guard verifier, and HTML renderer for Lathe (A2UI v0.9 + AG-UI + TypeSafe System One)",
+  "type": "module",
+  "bin": {
+    "lathe": "./dist/src/bin.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./src/index.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@lathe/core": "workspace:*",
+    "@lathe/shadcn": "workspace:*",
+    "@lathe/guard": "workspace:*",
+    "@lathe/ag-ui": "workspace:*",
+    "@lathe/react": "workspace:*",
+    "@lathe/typesafe": "workspace:*",
+    "@lathe/mcp": "workspace:*"
+  },
+  "license": "Apache-2.0",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=22.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orcawhisperer/lathe.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/orcawhisperer/lathe#readme",
+  "bugs": {
+    "url": "https://github.com/orcawhisperer/lathe/issues"
+  }
+}

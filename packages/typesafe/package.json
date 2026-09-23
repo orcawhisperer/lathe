@@ -1,0 +1,41 @@
+{
+  "name": "@lathe/typesafe",
+  "version": "0.1.0",
+  "description": "TypeSafe System One adapter for @lathe/core.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test \"test/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@lathe/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "@typesafe-ai/sdk": ">=0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orcawhisperer/lathe.git",
+    "directory": "packages/typesafe"
+  },
+  "homepage": "https://github.com/orcawhisperer/lathe#readme",
+  "bugs": {
+    "url": "https://github.com/orcawhisperer/lathe/issues"
+  }
+}

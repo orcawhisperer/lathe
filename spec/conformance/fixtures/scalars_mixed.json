@@ -1,0 +1,1697 @@
+{
+  "name": "scalars_mixed",
+  "why": "Baseline. One of every scalar type, including an integral float (1840.0) whose rendering differs between Python str() and JS String().",
+  "input": {
+    "catalog": "basic",
+    "state": {
+      "account": {
+        "plan": "pro",
+        "seats": 12,
+        "lifetime_value_usd": 1840.0,
+        "active": true,
+        "note": "Renewed early after the outage."
+      }
+    },
+    "intent": "Review this account",
+    "surfaceId": "surface_1",
+    "mode": "speculative"
+  },
+  "questions": {
+    "include_B000": {
+      "type": "noul",
+      "instructions": {
+        "question": "Should block B000 be shown in the interface for this request?",
+        "compare": [
+          "`blocks[B000].value`",
+          "`document.intent`"
+        ],
+        "focus": "Relevance of this single datum to what the user asked for."
+      },
+      "criteria": {
+        "true": "The user's request is about this datum, or it is needed to act on the request",
+        "false": "This datum is unrelated to the request and would only add clutter"
+      }
+    },
+    "component_B000": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which component should render block B000?",
+        "inspect": "`blocks[B000].value`",
+        "focus": "Match the shape and role of the datum, not the topic of the request."
+      },
+      "criteria": {
+        "Text": {
+          "what": "Plain prose or a label read as running text.",
+          "not_for": "A numeric measurement, a status word, or an interactive control",
+          "examples": [
+            "A paragraph explaining the refund policy"
+          ]
+        },
+        "Metric": {
+          "what": "A single key number or measurement shown with a label.",
+          "not_for": "Free-form prose, or a categorical status word",
+          "examples": [
+            "Amount charged: $49.00",
+            "Days overdue: 3"
+          ]
+        },
+        "StatusBadge": {
+          "what": "A short categorical status word shown as a coloured pill.",
+          "not_for": "A numeric measurement, or a sentence of prose",
+          "examples": [
+            "captured",
+            "pending",
+            "failed"
+          ]
+        },
+        "Callout": {
+          "what": "An aside that interrupts the flow to flag something the reader must not miss.",
+          "not_for": "Ordinary explanatory prose that does not need to stand out",
+          "examples": [
+            "Warning: this refund is outside the 30 day window"
+          ]
+        },
+        "TextField": {
+          "what": "A single-line input the user types into.",
+          "not_for": "Displaying a value the user cannot edit"
+        },
+        "ChoicePicker": {
+          "what": "A control that lets the user pick from a fixed set of options.",
+          "not_for": "Free text entry"
+        }
+      }
+    },
+    "include_B001": {
+      "type": "noul",
+      "instructions": {
+        "question": "Should block B001 be shown in the interface for this request?",
+        "compare": [
+          "`blocks[B001].value`",
+          "`document.intent`"
+        ],
+        "focus": "Relevance of this single datum to what the user asked for."
+      },
+      "criteria": {
+        "true": "The user's request is about this datum, or it is needed to act on the request",
+        "false": "This datum is unrelated to the request and would only add clutter"
+      }
+    },
+    "component_B001": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which component should render block B001?",
+        "inspect": "`blocks[B001].value`",
+        "focus": "Match the shape and role of the datum, not the topic of the request."
+      },
+      "criteria": {
+        "Text": {
+          "what": "Plain prose or a label read as running text.",
+          "not_for": "A numeric measurement, a status word, or an interactive control",
+          "examples": [
+            "A paragraph explaining the refund policy"
+          ]
+        },
+        "Metric": {
+          "what": "A single key number or measurement shown with a label.",
+          "not_for": "Free-form prose, or a categorical status word",
+          "examples": [
+            "Amount charged: $49.00",
+            "Days overdue: 3"
+          ]
+        },
+        "StatusBadge": {
+          "what": "A short categorical status word shown as a coloured pill.",
+          "not_for": "A numeric measurement, or a sentence of prose",
+          "examples": [
+            "captured",
+            "pending",
+            "failed"
+          ]
+        },
+        "Callout": {
+          "what": "An aside that interrupts the flow to flag something the reader must not miss.",
+          "not_for": "Ordinary explanatory prose that does not need to stand out",
+          "examples": [
+            "Warning: this refund is outside the 30 day window"
+          ]
+        },
+        "TextField": {
+          "what": "A single-line input the user types into.",
+          "not_for": "Displaying a value the user cannot edit"
+        },
+        "ChoicePicker": {
+          "what": "A control that lets the user pick from a fixed set of options.",
+          "not_for": "Free text entry"
+        }
+      }
+    },
+    "include_B002": {
+      "type": "noul",
+      "instructions": {
+        "question": "Should block B002 be shown in the interface for this request?",
+        "compare": [
+          "`blocks[B002].value`",
+          "`document.intent`"
+        ],
+        "focus": "Relevance of this single datum to what the user asked for."
+      },
+      "criteria": {
+        "true": "The user's request is about this datum, or it is needed to act on the request",
+        "false": "This datum is unrelated to the request and would only add clutter"
+      }
+    },
+    "component_B002": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which component should render block B002?",
+        "inspect": "`blocks[B002].value`",
+        "focus": "Match the shape and role of the datum, not the topic of the request."
+      },
+      "criteria": {
+        "Text": {
+          "what": "Plain prose or a label read as running text.",
+          "not_for": "A numeric measurement, a status word, or an interactive control",
+          "examples": [
+            "A paragraph explaining the refund policy"
+          ]
+        },
+        "Metric": {
+          "what": "A single key number or measurement shown with a label.",
+          "not_for": "Free-form prose, or a categorical status word",
+          "examples": [
+            "Amount charged: $49.00",
+            "Days overdue: 3"
+          ]
+        },
+        "StatusBadge": {
+          "what": "A short categorical status word shown as a coloured pill.",
+          "not_for": "A numeric measurement, or a sentence of prose",
+          "examples": [
+            "captured",
+            "pending",
+            "failed"
+          ]
+        },
+        "Callout": {
+          "what": "An aside that interrupts the flow to flag something the reader must not miss.",
+          "not_for": "Ordinary explanatory prose that does not need to stand out",
+          "examples": [
+            "Warning: this refund is outside the 30 day window"
+          ]
+        },
+        "TextField": {
+          "what": "A single-line input the user types into.",
+          "not_for": "Displaying a value the user cannot edit"
+        },
+        "ChoicePicker": {
+          "what": "A control that lets the user pick from a fixed set of options.",
+          "not_for": "Free text entry"
+        }
+      }
+    },
+    "include_B003": {
+      "type": "noul",
+      "instructions": {
+        "question": "Should block B003 be shown in the interface for this request?",
+        "compare": [
+          "`blocks[B003].value`",
+          "`document.intent`"
+        ],
+        "focus": "Relevance of this single datum to what the user asked for."
+      },
+      "criteria": {
+        "true": "The user's request is about this datum, or it is needed to act on the request",
+        "false": "This datum is unrelated to the request and would only add clutter"
+      }
+    },
+    "component_B003": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which component should render block B003?",
+        "inspect": "`blocks[B003].value`",
+        "focus": "Match the shape and role of the datum, not the topic of the request."
+      },
+      "criteria": {
+        "Text": {
+          "what": "Plain prose or a label read as running text.",
+          "not_for": "A numeric measurement, a status word, or an interactive control",
+          "examples": [
+            "A paragraph explaining the refund policy"
+          ]
+        },
+        "Metric": {
+          "what": "A single key number or measurement shown with a label.",
+          "not_for": "Free-form prose, or a categorical status word",
+          "examples": [
+            "Amount charged: $49.00",
+            "Days overdue: 3"
+          ]
+        },
+        "StatusBadge": {
+          "what": "A short categorical status word shown as a coloured pill.",
+          "not_for": "A numeric measurement, or a sentence of prose",
+          "examples": [
+            "captured",
+            "pending",
+            "failed"
+          ]
+        },
+        "Callout": {
+          "what": "An aside that interrupts the flow to flag something the reader must not miss.",
+          "not_for": "Ordinary explanatory prose that does not need to stand out",
+          "examples": [
+            "Warning: this refund is outside the 30 day window"
+          ]
+        },
+        "TextField": {
+          "what": "A single-line input the user types into.",
+          "not_for": "Displaying a value the user cannot edit"
+        },
+        "ChoicePicker": {
+          "what": "A control that lets the user pick from a fixed set of options.",
+          "not_for": "Free text entry"
+        }
+      }
+    },
+    "include_B004": {
+      "type": "noul",
+      "instructions": {
+        "question": "Should block B004 be shown in the interface for this request?",
+        "compare": [
+          "`blocks[B004].value`",
+          "`document.intent`"
+        ],
+        "focus": "Relevance of this single datum to what the user asked for."
+      },
+      "criteria": {
+        "true": "The user's request is about this datum, or it is needed to act on the request",
+        "false": "This datum is unrelated to the request and would only add clutter"
+      }
+    },
+    "component_B004": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which component should render block B004?",
+        "inspect": "`blocks[B004].value`",
+        "focus": "Match the shape and role of the datum, not the topic of the request."
+      },
+      "criteria": {
+        "Text": {
+          "what": "Plain prose or a label read as running text.",
+          "not_for": "A numeric measurement, a status word, or an interactive control",
+          "examples": [
+            "A paragraph explaining the refund policy"
+          ]
+        },
+        "Metric": {
+          "what": "A single key number or measurement shown with a label.",
+          "not_for": "Free-form prose, or a categorical status word",
+          "examples": [
+            "Amount charged: $49.00",
+            "Days overdue: 3"
+          ]
+        },
+        "StatusBadge": {
+          "what": "A short categorical status word shown as a coloured pill.",
+          "not_for": "A numeric measurement, or a sentence of prose",
+          "examples": [
+            "captured",
+            "pending",
+            "failed"
+          ]
+        },
+        "Callout": {
+          "what": "An aside that interrupts the flow to flag something the reader must not miss.",
+          "not_for": "Ordinary explanatory prose that does not need to stand out",
+          "examples": [
+            "Warning: this refund is outside the 30 day window"
+          ]
+        },
+        "TextField": {
+          "what": "A single-line input the user types into.",
+          "not_for": "Displaying a value the user cannot edit"
+        },
+        "ChoicePicker": {
+          "what": "A control that lets the user pick from a fixed set of options.",
+          "not_for": "Free text entry"
+        }
+      }
+    },
+    "prop_B000_Text_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B000?",
+        "inspect": "`blocks[B000].value`",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "h2": "A major section heading that names what follows",
+        "body": "Ordinary running prose",
+        "caption": "A small subordinate label above or below another control"
+      }
+    },
+    "stated_B000_Text_variant": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `variant` for block B000?",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B000_Metric_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the Metric rendering block B000?",
+        "focus": "The name of the measurement"
+      },
+      "criteria": {
+        "/account/plan": {
+          "what": "The value at `/account/plan`",
+          "examples": [
+            "pro"
+          ]
+        },
+        "/account/note": {
+          "what": "The value at `/account/note`",
+          "examples": [
+            "Renewed early after the outage."
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Review this account"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B000_Metric_trend": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `trend` fits block B000?",
+        "inspect": "`blocks[B000].value`",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "up": "The value increased",
+        "down": "The value decreased"
+      }
+    },
+    "stated_B000_Metric_trend": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `trend` for block B000?",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B000_StatusBadge_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B000?",
+        "inspect": "`blocks[B000].value`",
+        "focus": "Severity colour of the badge"
+      },
+      "criteria": {
+        "success": "Everything is fine, completed, or healthy",
+        "warning": "Needs attention but is not yet failing",
+        "error": "Failed, rejected, or broken"
+      }
+    },
+    "prop_B000_Callout_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B000?",
+        "inspect": "`blocks[B000].value`",
+        "focus": "What kind of aside this is"
+      },
+      "criteria": {
+        "note": "Neutral extra information the reader should be aware of",
+        "tip": "A helpful suggestion or shortcut that makes things easier",
+        "warning": "A caution about something that can go wrong or cause harm"
+      }
+    },
+    "prop_B000_TextField_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the TextField rendering block B000?",
+        "focus": "The field label"
+      },
+      "criteria": {
+        "/account/plan": {
+          "what": "The value at `/account/plan`",
+          "examples": [
+            "pro"
+          ]
+        },
+        "/account/note": {
+          "what": "The value at `/account/note`",
+          "examples": [
+            "Renewed early after the outage."
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Review this account"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B000_TextField_required": {
+      "type": "noul",
+      "instructions": {
+        "question": "For block B000: Whether this field must be filled before submitting?",
+        "inspect": "`blocks[B000].value`"
+      }
+    },
+    "prop_B000_ChoicePicker_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B000?",
+        "inspect": "`blocks[B000].value`",
+        "focus": "How many options can be selected"
+      },
+      "criteria": {
+        "mutuallyExclusive": "Exactly one option may be selected",
+        "multiSelect": "Any number of options may be selected"
+      }
+    },
+    "prop_B001_Text_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B001?",
+        "inspect": "`blocks[B001].value`",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "h2": "A major section heading that names what follows",
+        "body": "Ordinary running prose",
+        "caption": "A small subordinate label above or below another control"
+      }
+    },
+    "stated_B001_Text_variant": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `variant` for block B001?",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B001_Metric_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the Metric rendering block B001?",
+        "focus": "The name of the measurement"
+      },
+      "criteria": {
+        "/account/plan": {
+          "what": "The value at `/account/plan`",
+          "examples": [
+            "pro"
+          ]
+        },
+        "/account/note": {
+          "what": "The value at `/account/note`",
+          "examples": [
+            "Renewed early after the outage."
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Review this account"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B001_Metric_trend": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `trend` fits block B001?",
+        "inspect": "`blocks[B001].value`",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "up": "The value increased",
+        "down": "The value decreased"
+      }
+    },
+    "stated_B001_Metric_trend": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `trend` for block B001?",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B001_StatusBadge_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B001?",
+        "inspect": "`blocks[B001].value`",
+        "focus": "Severity colour of the badge"
+      },
+      "criteria": {
+        "success": "Everything is fine, completed, or healthy",
+        "warning": "Needs attention but is not yet failing",
+        "error": "Failed, rejected, or broken"
+      }
+    },
+    "prop_B001_Callout_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B001?",
+        "inspect": "`blocks[B001].value`",
+        "focus": "What kind of aside this is"
+      },
+      "criteria": {
+        "note": "Neutral extra information the reader should be aware of",
+        "tip": "A helpful suggestion or shortcut that makes things easier",
+        "warning": "A caution about something that can go wrong or cause harm"
+      }
+    },
+    "prop_B001_TextField_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the TextField rendering block B001?",
+        "focus": "The field label"
+      },
+      "criteria": {
+        "/account/plan": {
+          "what": "The value at `/account/plan`",
+          "examples": [
+            "pro"
+          ]
+        },
+        "/account/note": {
+          "what": "The value at `/account/note`",
+          "examples": [
+            "Renewed early after the outage."
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Review this account"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B001_TextField_required": {
+      "type": "noul",
+      "instructions": {
+        "question": "For block B001: Whether this field must be filled before submitting?",
+        "inspect": "`blocks[B001].value`"
+      }
+    },
+    "prop_B001_ChoicePicker_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B001?",
+        "inspect": "`blocks[B001].value`",
+        "focus": "How many options can be selected"
+      },
+      "criteria": {
+        "mutuallyExclusive": "Exactly one option may be selected",
+        "multiSelect": "Any number of options may be selected"
+      }
+    },
+    "prop_B002_Text_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B002?",
+        "inspect": "`blocks[B002].value`",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "h2": "A major section heading that names what follows",
+        "body": "Ordinary running prose",
+        "caption": "A small subordinate label above or below another control"
+      }
+    },
+    "stated_B002_Text_variant": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `variant` for block B002?",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B002_Metric_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the Metric rendering block B002?",
+        "focus": "The name of the measurement"
+      },
+      "criteria": {
+        "/account/plan": {
+          "what": "The value at `/account/plan`",
+          "examples": [
+            "pro"
+          ]
+        },
+        "/account/note": {
+          "what": "The value at `/account/note`",
+          "examples": [
+            "Renewed early after the outage."
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Review this account"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B002_Metric_trend": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `trend` fits block B002?",
+        "inspect": "`blocks[B002].value`",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "up": "The value increased",
+        "down": "The value decreased"
+      }
+    },
+    "stated_B002_Metric_trend": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `trend` for block B002?",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B002_StatusBadge_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B002?",
+        "inspect": "`blocks[B002].value`",
+        "focus": "Severity colour of the badge"
+      },
+      "criteria": {
+        "success": "Everything is fine, completed, or healthy",
+        "warning": "Needs attention but is not yet failing",
+        "error": "Failed, rejected, or broken"
+      }
+    },
+    "prop_B002_Callout_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B002?",
+        "inspect": "`blocks[B002].value`",
+        "focus": "What kind of aside this is"
+      },
+      "criteria": {
+        "note": "Neutral extra information the reader should be aware of",
+        "tip": "A helpful suggestion or shortcut that makes things easier",
+        "warning": "A caution about something that can go wrong or cause harm"
+      }
+    },
+    "prop_B002_TextField_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the TextField rendering block B002?",
+        "focus": "The field label"
+      },
+      "criteria": {
+        "/account/plan": {
+          "what": "The value at `/account/plan`",
+          "examples": [
+            "pro"
+          ]
+        },
+        "/account/note": {
+          "what": "The value at `/account/note`",
+          "examples": [
+            "Renewed early after the outage."
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Review this account"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B002_TextField_required": {
+      "type": "noul",
+      "instructions": {
+        "question": "For block B002: Whether this field must be filled before submitting?",
+        "inspect": "`blocks[B002].value`"
+      }
+    },
+    "prop_B002_ChoicePicker_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B002?",
+        "inspect": "`blocks[B002].value`",
+        "focus": "How many options can be selected"
+      },
+      "criteria": {
+        "mutuallyExclusive": "Exactly one option may be selected",
+        "multiSelect": "Any number of options may be selected"
+      }
+    },
+    "prop_B003_Text_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B003?",
+        "inspect": "`blocks[B003].value`",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "h2": "A major section heading that names what follows",
+        "body": "Ordinary running prose",
+        "caption": "A small subordinate label above or below another control"
+      }
+    },
+    "stated_B003_Text_variant": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `variant` for block B003?",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B003_Metric_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the Metric rendering block B003?",
+        "focus": "The name of the measurement"
+      },
+      "criteria": {
+        "/account/plan": {
+          "what": "The value at `/account/plan`",
+          "examples": [
+            "pro"
+          ]
+        },
+        "/account/note": {
+          "what": "The value at `/account/note`",
+          "examples": [
+            "Renewed early after the outage."
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Review this account"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B003_Metric_trend": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `trend` fits block B003?",
+        "inspect": "`blocks[B003].value`",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "up": "The value increased",
+        "down": "The value decreased"
+      }
+    },
+    "stated_B003_Metric_trend": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `trend` for block B003?",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B003_StatusBadge_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B003?",
+        "inspect": "`blocks[B003].value`",
+        "focus": "Severity colour of the badge"
+      },
+      "criteria": {
+        "success": "Everything is fine, completed, or healthy",
+        "warning": "Needs attention but is not yet failing",
+        "error": "Failed, rejected, or broken"
+      }
+    },
+    "prop_B003_Callout_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B003?",
+        "inspect": "`blocks[B003].value`",
+        "focus": "What kind of aside this is"
+      },
+      "criteria": {
+        "note": "Neutral extra information the reader should be aware of",
+        "tip": "A helpful suggestion or shortcut that makes things easier",
+        "warning": "A caution about something that can go wrong or cause harm"
+      }
+    },
+    "prop_B003_TextField_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the TextField rendering block B003?",
+        "focus": "The field label"
+      },
+      "criteria": {
+        "/account/plan": {
+          "what": "The value at `/account/plan`",
+          "examples": [
+            "pro"
+          ]
+        },
+        "/account/note": {
+          "what": "The value at `/account/note`",
+          "examples": [
+            "Renewed early after the outage."
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Review this account"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B003_TextField_required": {
+      "type": "noul",
+      "instructions": {
+        "question": "For block B003: Whether this field must be filled before submitting?",
+        "inspect": "`blocks[B003].value`"
+      }
+    },
+    "prop_B003_ChoicePicker_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B003?",
+        "inspect": "`blocks[B003].value`",
+        "focus": "How many options can be selected"
+      },
+      "criteria": {
+        "mutuallyExclusive": "Exactly one option may be selected",
+        "multiSelect": "Any number of options may be selected"
+      }
+    },
+    "prop_B004_Text_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B004?",
+        "inspect": "`blocks[B004].value`",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "h2": "A major section heading that names what follows",
+        "body": "Ordinary running prose",
+        "caption": "A small subordinate label above or below another control"
+      }
+    },
+    "stated_B004_Text_variant": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `variant` for block B004?",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B004_Metric_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the Metric rendering block B004?",
+        "focus": "The name of the measurement"
+      },
+      "criteria": {
+        "/account/plan": {
+          "what": "The value at `/account/plan`",
+          "examples": [
+            "pro"
+          ]
+        },
+        "/account/note": {
+          "what": "The value at `/account/note`",
+          "examples": [
+            "Renewed early after the outage."
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Review this account"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B004_Metric_trend": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `trend` fits block B004?",
+        "inspect": "`blocks[B004].value`",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "up": "The value increased",
+        "down": "The value decreased"
+      }
+    },
+    "stated_B004_Metric_trend": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `trend` for block B004?",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B004_StatusBadge_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B004?",
+        "inspect": "`blocks[B004].value`",
+        "focus": "Severity colour of the badge"
+      },
+      "criteria": {
+        "success": "Everything is fine, completed, or healthy",
+        "warning": "Needs attention but is not yet failing",
+        "error": "Failed, rejected, or broken"
+      }
+    },
+    "prop_B004_Callout_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B004?",
+        "inspect": "`blocks[B004].value`",
+        "focus": "What kind of aside this is"
+      },
+      "criteria": {
+        "note": "Neutral extra information the reader should be aware of",
+        "tip": "A helpful suggestion or shortcut that makes things easier",
+        "warning": "A caution about something that can go wrong or cause harm"
+      }
+    },
+    "prop_B004_TextField_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the TextField rendering block B004?",
+        "focus": "The field label"
+      },
+      "criteria": {
+        "/account/plan": {
+          "what": "The value at `/account/plan`",
+          "examples": [
+            "pro"
+          ]
+        },
+        "/account/note": {
+          "what": "The value at `/account/note`",
+          "examples": [
+            "Renewed early after the outage."
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Review this account"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B004_TextField_required": {
+      "type": "noul",
+      "instructions": {
+        "question": "For block B004: Whether this field must be filled before submitting?",
+        "inspect": "`blocks[B004].value`"
+      }
+    },
+    "prop_B004_ChoicePicker_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B004?",
+        "inspect": "`blocks[B004].value`",
+        "focus": "How many options can be selected"
+      },
+      "criteria": {
+        "mutuallyExclusive": "Exactly one option may be selected",
+        "multiSelect": "Any number of options may be selected"
+      }
+    }
+  },
+  "recording": {
+    "model": "jev-1.13.0",
+    "answers": {
+      "include_B000": {
+        "type": "noul",
+        "noul": 0.87
+      },
+      "component_B000": {
+        "type": "choice",
+        "choice": "StatusBadge",
+        "probabilities": {
+          "StatusBadge": 0.86,
+          "TextField": 0.0,
+          "ChoicePicker": 0.07,
+          "Callout": 0.0,
+          "Metric": 0.01,
+          "Text": 0.06
+        },
+        "confidence": 0.83
+      },
+      "include_B001": {
+        "type": "noul",
+        "noul": 0.86
+      },
+      "component_B001": {
+        "type": "choice",
+        "choice": "Metric",
+        "probabilities": {
+          "StatusBadge": 0.0,
+          "TextField": 0.0,
+          "ChoicePicker": 0.0,
+          "Callout": 0.0,
+          "Metric": 1.0,
+          "Text": 0.0
+        },
+        "confidence": 1.0
+      },
+      "include_B002": {
+        "type": "noul",
+        "noul": 0.77
+      },
+      "component_B002": {
+        "type": "choice",
+        "choice": "Metric",
+        "probabilities": {
+          "StatusBadge": 0.0,
+          "TextField": 0.0,
+          "ChoicePicker": 0.0,
+          "Metric": 1.0,
+          "Callout": 0.0,
+          "Text": 0.0
+        },
+        "confidence": 1.0
+      },
+      "include_B003": {
+        "type": "noul",
+        "noul": 0.84
+      },
+      "component_B003": {
+        "type": "choice",
+        "choice": "StatusBadge",
+        "probabilities": {
+          "StatusBadge": 1.0,
+          "TextField": 0.0,
+          "ChoicePicker": 0.0,
+          "Callout": 0.0,
+          "Metric": 0.0,
+          "Text": 0.0
+        },
+        "confidence": 0.99
+      },
+      "include_B004": {
+        "type": "noul",
+        "noul": 0.74
+      },
+      "component_B004": {
+        "type": "choice",
+        "choice": "Text",
+        "probabilities": {
+          "StatusBadge": 0.0,
+          "TextField": 0.0,
+          "ChoicePicker": 0.0,
+          "Callout": 0.07,
+          "Metric": 0.0,
+          "Text": 0.93
+        },
+        "confidence": 0.91
+      },
+      "prop_B000_Text_variant": {
+        "type": "choice",
+        "choice": "body",
+        "probabilities": {
+          "caption": 0.08,
+          "h2": 0.01,
+          "body": 0.91
+        },
+        "confidence": 0.86
+      },
+      "stated_B000_Text_variant": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "prop_B000_Metric_label": {
+        "type": "choice",
+        "choice": "/account/plan",
+        "probabilities": {
+          "/account/note": 0.0,
+          "__none__": 0.43,
+          "/intent": 0.0,
+          "/account/plan": 0.5700000000000001
+        },
+        "confidence": 0.41
+      },
+      "prop_B000_Metric_trend": {
+        "type": "choice",
+        "choice": "up",
+        "probabilities": {
+          "up": 0.95,
+          "down": 0.05
+        },
+        "confidence": 0.9
+      },
+      "stated_B000_Metric_trend": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "prop_B000_StatusBadge_variant": {
+        "type": "choice",
+        "choice": "success",
+        "probabilities": {
+          "warning": 0.04,
+          "success": 0.96,
+          "error": 0.0
+        },
+        "confidence": 0.94
+      },
+      "prop_B000_Callout_variant": {
+        "type": "choice",
+        "choice": "note",
+        "probabilities": {
+          "note": 0.99,
+          "warning": 0.0,
+          "tip": 0.01
+        },
+        "confidence": 0.99
+      },
+      "prop_B000_TextField_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/account/note": 0.0,
+          "__none__": 0.69,
+          "/intent": 0.0,
+          "/account/plan": 0.31
+        },
+        "confidence": 0.58
+      },
+      "prop_B000_TextField_required": {
+        "type": "noul",
+        "noul": 0.46
+      },
+      "prop_B000_ChoicePicker_variant": {
+        "type": "choice",
+        "choice": "mutuallyExclusive",
+        "probabilities": {
+          "multiSelect": 0.0,
+          "mutuallyExclusive": 1.0
+        },
+        "confidence": 1.0
+      },
+      "prop_B001_Text_variant": {
+        "type": "choice",
+        "choice": "body",
+        "probabilities": {
+          "caption": 0.06,
+          "h2": 0.01,
+          "body": 0.93
+        },
+        "confidence": 0.89
+      },
+      "stated_B001_Text_variant": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "prop_B001_Metric_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/account/note": 0.0,
+          "__none__": 0.99,
+          "/intent": 0.0,
+          "/account/plan": 0.01
+        },
+        "confidence": 0.98
+      },
+      "prop_B001_Metric_trend": {
+        "type": "choice",
+        "choice": "up",
+        "probabilities": {
+          "up": 0.91,
+          "down": 0.09
+        },
+        "confidence": 0.81
+      },
+      "stated_B001_Metric_trend": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "prop_B001_StatusBadge_variant": {
+        "type": "choice",
+        "choice": "success",
+        "probabilities": {
+          "warning": 0.04,
+          "success": 0.96,
+          "error": 0.0
+        },
+        "confidence": 0.94
+      },
+      "prop_B001_Callout_variant": {
+        "type": "choice",
+        "choice": "note",
+        "probabilities": {
+          "note": 0.98,
+          "warning": 0.01,
+          "tip": 0.01
+        },
+        "confidence": 0.98
+      },
+      "prop_B001_TextField_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/account/note": 0.0,
+          "__none__": 0.98,
+          "/intent": 0.01,
+          "/account/plan": 0.01
+        },
+        "confidence": 0.98
+      },
+      "prop_B001_TextField_required": {
+        "type": "noul",
+        "noul": 0.44
+      },
+      "prop_B001_ChoicePicker_variant": {
+        "type": "choice",
+        "choice": "mutuallyExclusive",
+        "probabilities": {
+          "multiSelect": 0.06,
+          "mutuallyExclusive": 0.94
+        },
+        "confidence": 0.88
+      },
+      "prop_B002_Text_variant": {
+        "type": "choice",
+        "choice": "body",
+        "probabilities": {
+          "caption": 0.03,
+          "h2": 0.0,
+          "body": 0.97
+        },
+        "confidence": 0.94
+      },
+      "stated_B002_Text_variant": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "prop_B002_Metric_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/account/note": 0.0,
+          "__none__": 1.0,
+          "/intent": 0.0,
+          "/account/plan": 0.0
+        },
+        "confidence": 0.99
+      },
+      "prop_B002_Metric_trend": {
+        "type": "choice",
+        "choice": "up",
+        "probabilities": {
+          "up": 0.95,
+          "down": 0.05
+        },
+        "confidence": 0.9
+      },
+      "stated_B002_Metric_trend": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "prop_B002_StatusBadge_variant": {
+        "type": "choice",
+        "choice": "success",
+        "probabilities": {
+          "warning": 0.05,
+          "success": 0.95,
+          "error": 0.0
+        },
+        "confidence": 0.92
+      },
+      "prop_B002_Callout_variant": {
+        "type": "choice",
+        "choice": "note",
+        "probabilities": {
+          "note": 1.0,
+          "warning": 0.0,
+          "tip": 0.0
+        },
+        "confidence": 0.99
+      },
+      "prop_B002_TextField_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/account/note": 0.01,
+          "__none__": 0.99,
+          "/intent": 0.0,
+          "/account/plan": 0.0
+        },
+        "confidence": 0.98
+      },
+      "prop_B002_TextField_required": {
+        "type": "noul",
+        "noul": 0.3
+      },
+      "prop_B002_ChoicePicker_variant": {
+        "type": "choice",
+        "choice": "mutuallyExclusive",
+        "probabilities": {
+          "multiSelect": 0.01,
+          "mutuallyExclusive": 0.99
+        },
+        "confidence": 0.98
+      },
+      "prop_B003_Text_variant": {
+        "type": "choice",
+        "choice": "body",
+        "probabilities": {
+          "caption": 0.09,
+          "h2": 0.0,
+          "body": 0.91
+        },
+        "confidence": 0.86
+      },
+      "stated_B003_Text_variant": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "prop_B003_Metric_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/account/note": 0.01,
+          "__none__": 0.96,
+          "/intent": 0.01,
+          "/account/plan": 0.02
+        },
+        "confidence": 0.95
+      },
+      "prop_B003_Metric_trend": {
+        "type": "choice",
+        "choice": "up",
+        "probabilities": {
+          "up": 0.97,
+          "down": 0.03
+        },
+        "confidence": 0.94
+      },
+      "stated_B003_Metric_trend": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "prop_B003_StatusBadge_variant": {
+        "type": "choice",
+        "choice": "success",
+        "probabilities": {
+          "warning": 0.0,
+          "success": 1.0,
+          "error": 0.0
+        },
+        "confidence": 1.0
+      },
+      "prop_B003_Callout_variant": {
+        "type": "choice",
+        "choice": "note",
+        "probabilities": {
+          "note": 0.99,
+          "warning": 0.01,
+          "tip": 0.0
+        },
+        "confidence": 0.98
+      },
+      "prop_B003_TextField_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/account/note": 0.01,
+          "__none__": 0.97,
+          "/intent": 0.01,
+          "/account/plan": 0.01
+        },
+        "confidence": 0.96
+      },
+      "prop_B003_TextField_required": {
+        "type": "noul",
+        "noul": 0.37
+      },
+      "prop_B003_ChoicePicker_variant": {
+        "type": "choice",
+        "choice": "mutuallyExclusive",
+        "probabilities": {
+          "multiSelect": 0.0,
+          "mutuallyExclusive": 1.0
+        },
+        "confidence": 0.99
+      },
+      "prop_B004_Text_variant": {
+        "type": "choice",
+        "choice": "body",
+        "probabilities": {
+          "caption": 0.28,
+          "h2": 0.0,
+          "body": 0.72
+        },
+        "confidence": 0.58
+      },
+      "stated_B004_Text_variant": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "prop_B004_Metric_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/account/note": 0.43,
+          "__none__": 0.55,
+          "/intent": 0.01,
+          "/account/plan": 0.01
+        },
+        "confidence": 0.41
+      },
+      "prop_B004_Metric_trend": {
+        "type": "choice",
+        "choice": "up",
+        "probabilities": {
+          "up": 0.89,
+          "down": 0.11
+        },
+        "confidence": 0.77
+      },
+      "stated_B004_Metric_trend": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "prop_B004_StatusBadge_variant": {
+        "type": "choice",
+        "choice": "warning",
+        "probabilities": {
+          "warning": 0.52,
+          "error": 0.01,
+          "success": 0.47
+        },
+        "confidence": 0.28
+      },
+      "prop_B004_Callout_variant": {
+        "type": "choice",
+        "choice": "note",
+        "probabilities": {
+          "note": 1.0,
+          "tip": 0.0,
+          "warning": 0.0
+        },
+        "confidence": 1.0
+      },
+      "prop_B004_TextField_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/account/note": 0.47,
+          "__none__": 0.53,
+          "/intent": 0.0,
+          "/account/plan": 0.0
+        },
+        "confidence": 0.37
+      },
+      "prop_B004_TextField_required": {
+        "type": "noul",
+        "noul": 0.16
+      },
+      "prop_B004_ChoicePicker_variant": {
+        "type": "choice",
+        "choice": "mutuallyExclusive",
+        "probabilities": {
+          "multiSelect": 0.06,
+          "mutuallyExclusive": 0.94
+        },
+        "confidence": 0.88
+      }
+    }
+  },
+  "expected": {
+    "messages": [
+      {
+        "version": "v0.9",
+        "createSurface": {
+          "surfaceId": "surface_1",
+          "catalogId": "https://a2ui.org/specification/v0_9/catalogs/basic/catalog.json",
+          "sendDataModel": true
+        }
+      },
+      {
+        "version": "v0.9",
+        "updateComponents": {
+          "surfaceId": "surface_1",
+          "components": [
+            {
+              "id": "root",
+              "component": "Column",
+              "children": [
+                "c_b000",
+                "c_b001",
+                "c_b002",
+                "c_b003",
+                "c_b004"
+              ]
+            },
+            {
+              "id": "c_b000",
+              "component": "StatusBadge",
+              "text": {
+                "path": "/account/plan"
+              },
+              "variant": "success"
+            },
+            {
+              "id": "c_b001",
+              "component": "Metric",
+              "value": {
+                "path": "/account/seats"
+              }
+            },
+            {
+              "id": "c_b002",
+              "component": "Metric",
+              "value": {
+                "path": "/account/lifetime_value_usd"
+              }
+            },
+            {
+              "id": "c_b003",
+              "component": "StatusBadge",
+              "text": {
+                "path": "/account/active"
+              },
+              "variant": "success"
+            },
+            {
+              "id": "c_b004",
+              "component": "Text",
+              "text": {
+                "path": "/account/note"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "version": "v0.9",
+        "updateDataModel": {
+          "surfaceId": "surface_1",
+          "value": {
+            "account": {
+              "plan": "pro",
+              "seats": 12,
+              "lifetime_value_usd": 1840.0,
+              "active": true,
+              "note": "Renewed early after the outage."
+            },
+            "intent": "Review this account"
+          }
+        }
+      }
+    ],
+    "excluded": [],
+    "mode": "speculative"
+  }
+}

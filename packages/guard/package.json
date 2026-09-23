@@ -1,0 +1,40 @@
+{
+  "name": "@lathe/guard",
+  "version": "0.1.0",
+  "description": "Four-tier verification and sink-safety guard for A2UI surfaces (Schema, Pointer/Numeric Trace, System One Entailment, and XSS/URL Sink Enforcement).",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test \"test/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@lathe/core": "workspace:*"
+  },
+  "license": "Apache-2.0",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=22.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orcawhisperer/lathe.git",
+    "directory": "packages/guard"
+  },
+  "homepage": "https://github.com/orcawhisperer/lathe#readme",
+  "bugs": {
+    "url": "https://github.com/orcawhisperer/lathe/issues"
+  }
+}

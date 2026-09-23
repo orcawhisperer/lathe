@@ -1,0 +1,31 @@
+{
+  "name": "@lathe/playground",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Interactive Lathe Studio & AG-UI SSE Server with live TypeSafe System One (jev-1.13.0) compilation, shape caching, and 4-tier @lathe/guard X-Ray.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node src/server.ts",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@lathe/core": "workspace:*",
+    "@lathe/typesafe": "workspace:*",
+    "@lathe/shadcn": "workspace:*",
+    "@lathe/guard": "workspace:*",
+    "@lathe/ag-ui": "workspace:*",
+    "@lathe/react": "workspace:*",
+    "@lathe/mcp": "workspace:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orcawhisperer/lathe.git",
+    "directory": "apps/playground"
+  },
+  "homepage": "https://github.com/orcawhisperer/lathe#readme",
+  "bugs": {
+    "url": "https://github.com/orcawhisperer/lathe/issues"
+  }
+}

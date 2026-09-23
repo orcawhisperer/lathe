@@ -1,0 +1,42 @@
+{
+  "name": "@lathe/mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol (MCP) & Tool-Call Auto-UI Bridge for Lathe (compiles any MCP tool result + follow-up action schema into a verified @lathe/shadcn A2UI v0.9 surface over AG-UI)",
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./src/index.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test \"test/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@lathe/core": "workspace:*",
+    "@lathe/shadcn": "workspace:*",
+    "@lathe/guard": "workspace:*",
+    "@lathe/ag-ui": "workspace:*",
+    "@lathe/react": "workspace:*"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=22.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orcawhisperer/lathe.git",
+    "directory": "packages/mcp"
+  },
+  "homepage": "https://github.com/orcawhisperer/lathe#readme",
+  "bugs": {
+    "url": "https://github.com/orcawhisperer/lathe/issues"
+  }
+}

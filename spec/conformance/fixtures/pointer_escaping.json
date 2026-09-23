@@ -1,0 +1,999 @@
+{
+  "name": "pointer_escaping",
+  "why": "RFC 6901 escaping. Keys containing '/' and '~' must round-trip as ~1 and ~0 identically in both implementations.",
+  "input": {
+    "catalog": "basic",
+    "state": {
+      "metrics": {
+        "req/sec": 480,
+        "cache~hit": "92%",
+        "p99_ms": 210
+      }
+    },
+    "intent": "Show the metrics",
+    "surfaceId": "surface_1",
+    "mode": "speculative"
+  },
+  "questions": {
+    "include_B000": {
+      "type": "noul",
+      "instructions": {
+        "question": "Should block B000 be shown in the interface for this request?",
+        "compare": [
+          "`blocks[B000].value`",
+          "`document.intent`"
+        ],
+        "focus": "Relevance of this single datum to what the user asked for."
+      },
+      "criteria": {
+        "true": "The user's request is about this datum, or it is needed to act on the request",
+        "false": "This datum is unrelated to the request and would only add clutter"
+      }
+    },
+    "component_B000": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which component should render block B000?",
+        "inspect": "`blocks[B000].value`",
+        "focus": "Match the shape and role of the datum, not the topic of the request."
+      },
+      "criteria": {
+        "Text": {
+          "what": "Plain prose or a label read as running text.",
+          "not_for": "A numeric measurement, a status word, or an interactive control",
+          "examples": [
+            "A paragraph explaining the refund policy"
+          ]
+        },
+        "Metric": {
+          "what": "A single key number or measurement shown with a label.",
+          "not_for": "Free-form prose, or a categorical status word",
+          "examples": [
+            "Amount charged: $49.00",
+            "Days overdue: 3"
+          ]
+        },
+        "StatusBadge": {
+          "what": "A short categorical status word shown as a coloured pill.",
+          "not_for": "A numeric measurement, or a sentence of prose",
+          "examples": [
+            "captured",
+            "pending",
+            "failed"
+          ]
+        },
+        "Callout": {
+          "what": "An aside that interrupts the flow to flag something the reader must not miss.",
+          "not_for": "Ordinary explanatory prose that does not need to stand out",
+          "examples": [
+            "Warning: this refund is outside the 30 day window"
+          ]
+        },
+        "TextField": {
+          "what": "A single-line input the user types into.",
+          "not_for": "Displaying a value the user cannot edit"
+        },
+        "ChoicePicker": {
+          "what": "A control that lets the user pick from a fixed set of options.",
+          "not_for": "Free text entry"
+        }
+      }
+    },
+    "include_B001": {
+      "type": "noul",
+      "instructions": {
+        "question": "Should block B001 be shown in the interface for this request?",
+        "compare": [
+          "`blocks[B001].value`",
+          "`document.intent`"
+        ],
+        "focus": "Relevance of this single datum to what the user asked for."
+      },
+      "criteria": {
+        "true": "The user's request is about this datum, or it is needed to act on the request",
+        "false": "This datum is unrelated to the request and would only add clutter"
+      }
+    },
+    "component_B001": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which component should render block B001?",
+        "inspect": "`blocks[B001].value`",
+        "focus": "Match the shape and role of the datum, not the topic of the request."
+      },
+      "criteria": {
+        "Text": {
+          "what": "Plain prose or a label read as running text.",
+          "not_for": "A numeric measurement, a status word, or an interactive control",
+          "examples": [
+            "A paragraph explaining the refund policy"
+          ]
+        },
+        "Metric": {
+          "what": "A single key number or measurement shown with a label.",
+          "not_for": "Free-form prose, or a categorical status word",
+          "examples": [
+            "Amount charged: $49.00",
+            "Days overdue: 3"
+          ]
+        },
+        "StatusBadge": {
+          "what": "A short categorical status word shown as a coloured pill.",
+          "not_for": "A numeric measurement, or a sentence of prose",
+          "examples": [
+            "captured",
+            "pending",
+            "failed"
+          ]
+        },
+        "Callout": {
+          "what": "An aside that interrupts the flow to flag something the reader must not miss.",
+          "not_for": "Ordinary explanatory prose that does not need to stand out",
+          "examples": [
+            "Warning: this refund is outside the 30 day window"
+          ]
+        },
+        "TextField": {
+          "what": "A single-line input the user types into.",
+          "not_for": "Displaying a value the user cannot edit"
+        },
+        "ChoicePicker": {
+          "what": "A control that lets the user pick from a fixed set of options.",
+          "not_for": "Free text entry"
+        }
+      }
+    },
+    "include_B002": {
+      "type": "noul",
+      "instructions": {
+        "question": "Should block B002 be shown in the interface for this request?",
+        "compare": [
+          "`blocks[B002].value`",
+          "`document.intent`"
+        ],
+        "focus": "Relevance of this single datum to what the user asked for."
+      },
+      "criteria": {
+        "true": "The user's request is about this datum, or it is needed to act on the request",
+        "false": "This datum is unrelated to the request and would only add clutter"
+      }
+    },
+    "component_B002": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which component should render block B002?",
+        "inspect": "`blocks[B002].value`",
+        "focus": "Match the shape and role of the datum, not the topic of the request."
+      },
+      "criteria": {
+        "Text": {
+          "what": "Plain prose or a label read as running text.",
+          "not_for": "A numeric measurement, a status word, or an interactive control",
+          "examples": [
+            "A paragraph explaining the refund policy"
+          ]
+        },
+        "Metric": {
+          "what": "A single key number or measurement shown with a label.",
+          "not_for": "Free-form prose, or a categorical status word",
+          "examples": [
+            "Amount charged: $49.00",
+            "Days overdue: 3"
+          ]
+        },
+        "StatusBadge": {
+          "what": "A short categorical status word shown as a coloured pill.",
+          "not_for": "A numeric measurement, or a sentence of prose",
+          "examples": [
+            "captured",
+            "pending",
+            "failed"
+          ]
+        },
+        "Callout": {
+          "what": "An aside that interrupts the flow to flag something the reader must not miss.",
+          "not_for": "Ordinary explanatory prose that does not need to stand out",
+          "examples": [
+            "Warning: this refund is outside the 30 day window"
+          ]
+        },
+        "TextField": {
+          "what": "A single-line input the user types into.",
+          "not_for": "Displaying a value the user cannot edit"
+        },
+        "ChoicePicker": {
+          "what": "A control that lets the user pick from a fixed set of options.",
+          "not_for": "Free text entry"
+        }
+      }
+    },
+    "prop_B000_Text_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B000?",
+        "inspect": "`blocks[B000].value`",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "h2": "A major section heading that names what follows",
+        "body": "Ordinary running prose",
+        "caption": "A small subordinate label above or below another control"
+      }
+    },
+    "stated_B000_Text_variant": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `variant` for block B000?",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B000_Metric_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the Metric rendering block B000?",
+        "focus": "The name of the measurement"
+      },
+      "criteria": {
+        "/metrics/cache~0hit": {
+          "what": "The value at `/metrics/cache~0hit`",
+          "examples": [
+            "92%"
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Show the metrics"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B000_Metric_trend": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `trend` fits block B000?",
+        "inspect": "`blocks[B000].value`",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "up": "The value increased",
+        "down": "The value decreased"
+      }
+    },
+    "stated_B000_Metric_trend": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `trend` for block B000?",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B000_StatusBadge_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B000?",
+        "inspect": "`blocks[B000].value`",
+        "focus": "Severity colour of the badge"
+      },
+      "criteria": {
+        "success": "Everything is fine, completed, or healthy",
+        "warning": "Needs attention but is not yet failing",
+        "error": "Failed, rejected, or broken"
+      }
+    },
+    "prop_B000_Callout_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B000?",
+        "inspect": "`blocks[B000].value`",
+        "focus": "What kind of aside this is"
+      },
+      "criteria": {
+        "note": "Neutral extra information the reader should be aware of",
+        "tip": "A helpful suggestion or shortcut that makes things easier",
+        "warning": "A caution about something that can go wrong or cause harm"
+      }
+    },
+    "prop_B000_TextField_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the TextField rendering block B000?",
+        "focus": "The field label"
+      },
+      "criteria": {
+        "/metrics/cache~0hit": {
+          "what": "The value at `/metrics/cache~0hit`",
+          "examples": [
+            "92%"
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Show the metrics"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B000_TextField_required": {
+      "type": "noul",
+      "instructions": {
+        "question": "For block B000: Whether this field must be filled before submitting?",
+        "inspect": "`blocks[B000].value`"
+      }
+    },
+    "prop_B000_ChoicePicker_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B000?",
+        "inspect": "`blocks[B000].value`",
+        "focus": "How many options can be selected"
+      },
+      "criteria": {
+        "mutuallyExclusive": "Exactly one option may be selected",
+        "multiSelect": "Any number of options may be selected"
+      }
+    },
+    "prop_B001_Text_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B001?",
+        "inspect": "`blocks[B001].value`",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "h2": "A major section heading that names what follows",
+        "body": "Ordinary running prose",
+        "caption": "A small subordinate label above or below another control"
+      }
+    },
+    "stated_B001_Text_variant": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `variant` for block B001?",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B001_Metric_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the Metric rendering block B001?",
+        "focus": "The name of the measurement"
+      },
+      "criteria": {
+        "/metrics/cache~0hit": {
+          "what": "The value at `/metrics/cache~0hit`",
+          "examples": [
+            "92%"
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Show the metrics"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B001_Metric_trend": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `trend` fits block B001?",
+        "inspect": "`blocks[B001].value`",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "up": "The value increased",
+        "down": "The value decreased"
+      }
+    },
+    "stated_B001_Metric_trend": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `trend` for block B001?",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B001_StatusBadge_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B001?",
+        "inspect": "`blocks[B001].value`",
+        "focus": "Severity colour of the badge"
+      },
+      "criteria": {
+        "success": "Everything is fine, completed, or healthy",
+        "warning": "Needs attention but is not yet failing",
+        "error": "Failed, rejected, or broken"
+      }
+    },
+    "prop_B001_Callout_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B001?",
+        "inspect": "`blocks[B001].value`",
+        "focus": "What kind of aside this is"
+      },
+      "criteria": {
+        "note": "Neutral extra information the reader should be aware of",
+        "tip": "A helpful suggestion or shortcut that makes things easier",
+        "warning": "A caution about something that can go wrong or cause harm"
+      }
+    },
+    "prop_B001_TextField_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the TextField rendering block B001?",
+        "focus": "The field label"
+      },
+      "criteria": {
+        "/metrics/cache~0hit": {
+          "what": "The value at `/metrics/cache~0hit`",
+          "examples": [
+            "92%"
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Show the metrics"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B001_TextField_required": {
+      "type": "noul",
+      "instructions": {
+        "question": "For block B001: Whether this field must be filled before submitting?",
+        "inspect": "`blocks[B001].value`"
+      }
+    },
+    "prop_B001_ChoicePicker_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B001?",
+        "inspect": "`blocks[B001].value`",
+        "focus": "How many options can be selected"
+      },
+      "criteria": {
+        "mutuallyExclusive": "Exactly one option may be selected",
+        "multiSelect": "Any number of options may be selected"
+      }
+    },
+    "prop_B002_Text_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B002?",
+        "inspect": "`blocks[B002].value`",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "h2": "A major section heading that names what follows",
+        "body": "Ordinary running prose",
+        "caption": "A small subordinate label above or below another control"
+      }
+    },
+    "stated_B002_Text_variant": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `variant` for block B002?",
+        "focus": "Typographic role of this text"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B002_Metric_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the Metric rendering block B002?",
+        "focus": "The name of the measurement"
+      },
+      "criteria": {
+        "/metrics/cache~0hit": {
+          "what": "The value at `/metrics/cache~0hit`",
+          "examples": [
+            "92%"
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Show the metrics"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B002_Metric_trend": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `trend` fits block B002?",
+        "inspect": "`blocks[B002].value`",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "up": "The value increased",
+        "down": "The value decreased"
+      }
+    },
+    "stated_B002_Metric_trend": {
+      "type": "noul",
+      "instructions": {
+        "question": "Does the document say anything about `trend` for block B002?",
+        "focus": "Direction this metric has moved"
+      },
+      "criteria": {
+        "true": "The document supports a specific value for this property",
+        "false": "The document says nothing about it; the component default should stand"
+      }
+    },
+    "prop_B002_StatusBadge_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B002?",
+        "inspect": "`blocks[B002].value`",
+        "focus": "Severity colour of the badge"
+      },
+      "criteria": {
+        "success": "Everything is fine, completed, or healthy",
+        "warning": "Needs attention but is not yet failing",
+        "error": "Failed, rejected, or broken"
+      }
+    },
+    "prop_B002_Callout_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B002?",
+        "inspect": "`blocks[B002].value`",
+        "focus": "What kind of aside this is"
+      },
+      "criteria": {
+        "note": "Neutral extra information the reader should be aware of",
+        "tip": "A helpful suggestion or shortcut that makes things easier",
+        "warning": "A caution about something that can go wrong or cause harm"
+      }
+    },
+    "prop_B002_TextField_label": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which field should supply `label` for the TextField rendering block B002?",
+        "focus": "The field label"
+      },
+      "criteria": {
+        "/metrics/cache~0hit": {
+          "what": "The value at `/metrics/cache~0hit`",
+          "examples": [
+            "92%"
+          ]
+        },
+        "/intent": {
+          "what": "The value at `/intent`",
+          "examples": [
+            "Show the metrics"
+          ]
+        },
+        "__none__": {
+          "what": "No field in the document is a good fit for this property",
+          "not_for": "Any case where one of the listed paths clearly fits"
+        }
+      }
+    },
+    "prop_B002_TextField_required": {
+      "type": "noul",
+      "instructions": {
+        "question": "For block B002: Whether this field must be filled before submitting?",
+        "inspect": "`blocks[B002].value`"
+      }
+    },
+    "prop_B002_ChoicePicker_variant": {
+      "type": "choice",
+      "instructions": {
+        "question": "Which `variant` fits block B002?",
+        "inspect": "`blocks[B002].value`",
+        "focus": "How many options can be selected"
+      },
+      "criteria": {
+        "mutuallyExclusive": "Exactly one option may be selected",
+        "multiSelect": "Any number of options may be selected"
+      }
+    }
+  },
+  "recording": {
+    "model": "jev-1.13.0",
+    "answers": {
+      "include_B000": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "component_B000": {
+        "type": "choice",
+        "choice": "Metric",
+        "probabilities": {
+          "Metric": 1.0,
+          "Text": 0.0,
+          "Callout": 0.0,
+          "ChoicePicker": 0.0,
+          "StatusBadge": 0.0,
+          "TextField": 0.0
+        },
+        "confidence": 1.0
+      },
+      "include_B001": {
+        "type": "noul",
+        "noul": 0.94
+      },
+      "component_B001": {
+        "type": "choice",
+        "choice": "Metric",
+        "probabilities": {
+          "Metric": 1.0,
+          "Text": 0.0,
+          "Callout": 0.0,
+          "ChoicePicker": 0.0,
+          "StatusBadge": 0.0,
+          "TextField": 0.0
+        },
+        "confidence": 1.0
+      },
+      "include_B002": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "component_B002": {
+        "type": "choice",
+        "choice": "Metric",
+        "probabilities": {
+          "Metric": 1.0,
+          "Text": 0.0,
+          "Callout": 0.0,
+          "ChoicePicker": 0.0,
+          "StatusBadge": 0.0,
+          "TextField": 0.0
+        },
+        "confidence": 1.0
+      },
+      "prop_B000_Text_variant": {
+        "type": "choice",
+        "choice": "body",
+        "probabilities": {
+          "caption": 0.08,
+          "h2": 0.02,
+          "body": 0.9
+        },
+        "confidence": 0.85
+      },
+      "stated_B000_Text_variant": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "prop_B000_Metric_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/metrics/cache~0hit": 0.01,
+          "/intent": 0.01,
+          "__none__": 0.98
+        },
+        "confidence": 0.97
+      },
+      "prop_B000_Metric_trend": {
+        "type": "choice",
+        "choice": "up",
+        "probabilities": {
+          "down": 0.08,
+          "up": 0.92
+        },
+        "confidence": 0.85
+      },
+      "stated_B000_Metric_trend": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "prop_B000_StatusBadge_variant": {
+        "type": "choice",
+        "choice": "success",
+        "probabilities": {
+          "warning": 0.01,
+          "success": 0.99,
+          "error": 0.0
+        },
+        "confidence": 0.98
+      },
+      "prop_B000_Callout_variant": {
+        "type": "choice",
+        "choice": "note",
+        "probabilities": {
+          "note": 1.0,
+          "warning": 0.0,
+          "tip": 0.0
+        },
+        "confidence": 1.0
+      },
+      "prop_B000_TextField_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/metrics/cache~0hit": 0.01,
+          "/intent": 0.13,
+          "__none__": 0.86
+        },
+        "confidence": 0.8
+      },
+      "prop_B000_TextField_required": {
+        "type": "noul",
+        "noul": 0.33
+      },
+      "prop_B000_ChoicePicker_variant": {
+        "type": "choice",
+        "choice": "mutuallyExclusive",
+        "probabilities": {
+          "mutuallyExclusive": 0.99,
+          "multiSelect": 0.01
+        },
+        "confidence": 0.98
+      },
+      "prop_B001_Text_variant": {
+        "type": "choice",
+        "choice": "body",
+        "probabilities": {
+          "caption": 0.1,
+          "h2": 0.01,
+          "body": 0.89
+        },
+        "confidence": 0.84
+      },
+      "stated_B001_Text_variant": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "prop_B001_Metric_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/metrics/cache~0hit": 0.47,
+          "__none__": 0.53,
+          "/intent": 0.0
+        },
+        "confidence": 0.29
+      },
+      "prop_B001_Metric_trend": {
+        "type": "choice",
+        "choice": "up",
+        "probabilities": {
+          "down": 0.09,
+          "up": 0.91
+        },
+        "confidence": 0.83
+      },
+      "stated_B001_Metric_trend": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "prop_B001_StatusBadge_variant": {
+        "type": "choice",
+        "choice": "success",
+        "probabilities": {
+          "warning": 0.01,
+          "success": 0.99,
+          "error": 0.0
+        },
+        "confidence": 0.97
+      },
+      "prop_B001_Callout_variant": {
+        "type": "choice",
+        "choice": "note",
+        "probabilities": {
+          "note": 1.0,
+          "warning": 0.0,
+          "tip": 0.0
+        },
+        "confidence": 0.99
+      },
+      "prop_B001_TextField_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/metrics/cache~0hit": 0.35,
+          "/intent": 0.01,
+          "__none__": 0.64
+        },
+        "confidence": 0.45
+      },
+      "prop_B001_TextField_required": {
+        "type": "noul",
+        "noul": 0.26
+      },
+      "prop_B001_ChoicePicker_variant": {
+        "type": "choice",
+        "choice": "mutuallyExclusive",
+        "probabilities": {
+          "mutuallyExclusive": 0.99,
+          "multiSelect": 0.01
+        },
+        "confidence": 0.98
+      },
+      "prop_B002_Text_variant": {
+        "type": "choice",
+        "choice": "body",
+        "probabilities": {
+          "caption": 0.07,
+          "h2": 0.01,
+          "body": 0.92
+        },
+        "confidence": 0.89
+      },
+      "stated_B002_Text_variant": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "prop_B002_Metric_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/metrics/cache~0hit": 0.02,
+          "/intent": 0.01,
+          "__none__": 0.97
+        },
+        "confidence": 0.97
+      },
+      "prop_B002_Metric_trend": {
+        "type": "choice",
+        "choice": "up",
+        "probabilities": {
+          "down": 0.36,
+          "up": 0.64
+        },
+        "confidence": 0.28
+      },
+      "stated_B002_Metric_trend": {
+        "type": "noul",
+        "noul": 0.04
+      },
+      "prop_B002_StatusBadge_variant": {
+        "type": "choice",
+        "choice": "success",
+        "probabilities": {
+          "warning": 0.09,
+          "success": 0.91,
+          "error": 0.0
+        },
+        "confidence": 0.87
+      },
+      "prop_B002_Callout_variant": {
+        "type": "choice",
+        "choice": "note",
+        "probabilities": {
+          "note": 0.99,
+          "warning": 0.01,
+          "tip": 0.0
+        },
+        "confidence": 0.99
+      },
+      "prop_B002_TextField_label": {
+        "type": "choice",
+        "choice": "__none__",
+        "probabilities": {
+          "/metrics/cache~0hit": 0.01,
+          "/intent": 0.06,
+          "__none__": 0.93
+        },
+        "confidence": 0.89
+      },
+      "prop_B002_TextField_required": {
+        "type": "noul",
+        "noul": 0.27
+      },
+      "prop_B002_ChoicePicker_variant": {
+        "type": "choice",
+        "choice": "mutuallyExclusive",
+        "probabilities": {
+          "mutuallyExclusive": 0.99,
+          "multiSelect": 0.01
+        },
+        "confidence": 0.98
+      }
+    }
+  },
+  "expected": {
+    "messages": [
+      {
+        "version": "v0.9",
+        "createSurface": {
+          "surfaceId": "surface_1",
+          "catalogId": "https://a2ui.org/specification/v0_9/catalogs/basic/catalog.json",
+          "sendDataModel": true
+        }
+      },
+      {
+        "version": "v0.9",
+        "updateComponents": {
+          "surfaceId": "surface_1",
+          "components": [
+            {
+              "id": "root",
+              "component": "Column",
+              "children": [
+                "c_b000",
+                "c_b001",
+                "c_b002"
+              ]
+            },
+            {
+              "id": "c_b000",
+              "component": "Metric",
+              "value": {
+                "path": "/metrics/req~1sec"
+              }
+            },
+            {
+              "id": "c_b001",
+              "component": "Metric",
+              "value": {
+                "path": "/metrics/cache~0hit"
+              }
+            },
+            {
+              "id": "c_b002",
+              "component": "Metric",
+              "value": {
+                "path": "/metrics/p99_ms"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "version": "v0.9",
+        "updateDataModel": {
+          "surfaceId": "surface_1",
+          "value": {
+            "metrics": {
+              "req/sec": 480,
+              "cache~hit": "92%",
+              "p99_ms": 210
+            },
+            "intent": "Show the metrics"
+          }
+        }
+      }
+    ],
+    "excluded": [],
+    "mode": "speculative"
+  }
+}
