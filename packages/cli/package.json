@@ -1,6 +1,6 @@
 {
   "name": "@orcawhisperer/lathe-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Command-line compiler, catalog linter, guard verifier, and HTML renderer for Lathe (A2UI v0.9 + AG-UI + TypeSafe System One)",
   "type": "module",
   "bin": {

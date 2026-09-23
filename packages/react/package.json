@@ -1,6 +1,6 @@
 {
   "name": "@orcawhisperer/lathe-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A2UI v0.9 surface renderer with shadcn/ui styling, confidence-driven runner-up swap pills, and two-way RFC 6901 JSON Pointer state patching.",
   "type": "module",
   "main": "./dist/index.js",

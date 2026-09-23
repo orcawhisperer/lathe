@@ -1,6 +1,6 @@
 {
   "name": "@orcawhisperer/lathe-guard",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Four-tier verification and sink-safety guard for A2UI surfaces (Schema, Pointer/Numeric Trace, System One Entailment, and XSS/URL Sink Enforcement).",
   "type": "module",
   "main": "./dist/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@orcawhisperer/lathe-shadcn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Flagship shadcn/ui compilable component catalog + i18n phrase bank for @lathe/core.",
   "license": "Apache-2.0",
   "type": "module",

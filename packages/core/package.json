@@ -1,6 +1,6 @@
 {
   "name": "@orcawhisperer/lathe-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Compile A2UI surfaces from a component catalog and an application state. No text is generated.",
   "license": "Apache-2.0",
   "type": "module",
